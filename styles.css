@@ -1,0 +1,62 @@
+﻿* {font-family: Verdana, sans-serif;}
+body {margin: 0;}
+h1, h2, h3{margin: 0;}
+
+#logo{
+    width: 70px;
+    height: 70px;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: red;
+    color: #fff;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: inherit;
+    float: left;
+}
+
+#navbar a:hover{
+    color: grey;
+}
+
+#more-dropdown{
+    float:left;
+}
+
+#navbar:not(:nth-child(1)) {
+    float: right;
+}
+
+.dropbtn{
+    border: none;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    color: white;
+    padding: 0;
+}
+
+#more-dropdown-content{
+    display: none;
+}
+
+#more-dropdown:hover #more-dropdown-content{
+    display: block;
+}
+
+#header {
+    display: flex;
+    background-color: red;
+    color: #fff;
+    margin: 0;
+    height: 100vh;
+    padding-top: 150px;
+}
+
+#header-menu{
+    float: left;
+}
