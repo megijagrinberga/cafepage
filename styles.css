@@ -3,35 +3,69 @@ body {margin: 0;}
 h1, h2, h3{margin: 0;}
 
 #logo{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 
 #navbar {
-    overflow: hidden;
-    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ea272f;
     color: #fff;
+    font-size: 16px;
 }
 
 #navbar a{
     text-decoration: none;
     color: inherit;
-    float: left;
 }
 
-#navbar a:hover{
-    color: grey;
+#navbar-left a:not(:first-of-type){
+    margin: 25px 20px 25px 20px;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#logo{margin-left: 63px}
+
+#navbar-right > a:hover, #more-dropdown:hover .dropbtn {
+    color: #fdcc30;
+    transition: all 0.25s;
+}
+
+#more-dropdown:hover, .dropbtn:hover{cursor: pointer;}
+
+#navbar-left, #navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+#navbar-right > a{
+    margin: 30px 20px 25px 20px;
 }
 
 #more-dropdown{
-    float:left;
+    margin-top: 10px;
+    padding: 20px 20px 25px 20px;
 }
 
-#navbar:not(:nth-child(1)) {
-    float: right;
+#navbar-right > a:last-of-type {
+    margin-right: 75px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 15px 25px;
+    border-radius: 45px;
+    color: #ea272f;
+    background-color: white;
 }
 
-.dropbtn{
+#navbar-right > a, .dropbtn{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.dropbtn {
     border: none;
     background-color: inherit;
     font-family: inherit;
@@ -40,17 +74,36 @@ h1, h2, h3{margin: 0;}
     padding: 0;
 }
 
-#more-dropdown-content{
+.dropbtn i{margin-left: 10px;}
+
+#more-dropdown-content {
     display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+#more-dropdown-content a {
+    width: 100%;
+    padding: 10px 0 10px 0;
+}
+
+#more-dropdown-content a:not(:first-of-type){
+    border-top: 1px solid lightgray;
 }
 
 #more-dropdown:hover #more-dropdown-content{
-    display: block;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
 }
 
 #header {
     display: flex;
-    background-color: red;
+    background-color: #ea272f;
     color: #fff;
     margin: 0;
     height: 100vh;

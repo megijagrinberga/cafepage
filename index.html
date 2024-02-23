@@ -1,24 +1,29 @@
 ﻿<html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width intitial-scale=1.0"/>
-    <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>MyFoodCafe</title>
 </head>
 <body>
     <div id="navbar">
-        <a href="https://theuselessweb.com/"><img id="logo" src="/images/logo.png"/></a>
-        <a href="index.html">MyFoodCafe</a>
-        <a href="index.html">Home</a>
-        <div id="more-dropdown">
-            <button class="dropbtn">More<i class="fa fa-caret-down"></i></button>
-            <div id="more-dropdown-content">
-                <a href="#navbar">Pizza</a>
-                <a href="#navbar">Thai Food</a>
-                <a href="#navbar">Sushi</a>
-            </div>
+        <div id="navbar-left">
+            <a href="https://theuselessweb.com/"><img id="logo" src="images/logo.png" /></a>
+            <a href="index.html">MyFoodCafe</a>
         </div>
-        <a href="#header">Order</a>
+        <div id="navbar-right">
+            <a href="index.html">Home</a>
+            <div id="more-dropdown">
+                <button class="dropbtn" onclick="changeTextColor()">More<i class="fa-solid fa-caret-down"></i></button>
+                <div id="more-dropdown-content">
+                    <a href="#navbar">Pizza</a>
+                    <a href="#navbar">Thai Food</a>
+                    <a href="#navbar">Sushi</a>
+                </div>
+            </div>
+            <a href="#header">Order</a>
+        </div>
     </div>
     <div id="header">
         <div id="header-txt">
@@ -30,7 +35,7 @@
                 <li>Pizza</li>
             </ul>
         </div>
-        <img id="header-img" src="/images/header-sushi.png" alt="Picture of sushi" />
+        <img id="header-img" src="images/header-sushi.png" alt="Picture of sushi" />
     </div>
 
 </body>
