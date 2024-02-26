@@ -1,10 +1,11 @@
-﻿* {
-    font-family: Tahoma, sans-serif;
-}
-body {margin: 0;
-          margin-left: auto;
+﻿* {font-family: Tahoma, sans-serif;}
+
+body {
+    margin: 0;
+    margin-left: auto;
     margin-right: auto;
 }
+
 h1, h2, h3{margin: 0;}
 
 #logo{
@@ -14,6 +15,12 @@ h1, h2, h3{margin: 0;}
 
 .color-container:nth-of-type(1), .color-container:nth-of-type(2) {
     background-color: #ea272f;
+}
+.color-container:nth-of-type(3) {
+    background-color: #fff4e2;
+}
+.color-container:nth-of-type(4), .content-container:nth-of-type(5) {
+    background-color: #ffff;
 }
 
 .content-container {
@@ -41,10 +48,10 @@ h1, h2, h3{margin: 0;}
     font-weight: bold;
 }
 
-#logo{margin-left: 63px}
+#logo{margin-left: 63px} /*Varētu atsevišķu container, lai visām sadaļām šis ir*/
 
 #navbar-right > a:last-of-type {
-    margin-right: 75px;
+    margin-right: 75px; /*Varētu atsevišķu container, lai visām sadaļām šis ir*/
     margin-top: 15px;
     margin-bottom: 10px;
     padding: 15px 25px;
@@ -117,15 +124,20 @@ h1, h2, h3{margin: 0;}
 
 /**********HEADER***********/
 
+h1 {
+    font-size: 90px;
+}
+
 #header {
     display: flex;
     color: #fff;
     margin: 0;
-    height: 100vh;
+    height: 90vh;
+    max-height: 500px; /*Media query (?), lai height būtu lielāks, kad ekrāns mazāks, citādi img ieiet nākamajā sadaļā*/
     padding-top: 100px;
     column-gap: 30px;
-    margin-left: 63px;
-    margin-right: 70px;
+    margin-left: 63px; /*Varētu atsevišķu container, lai visām sadaļām šis ir*/
+    margin-right: 70px; /*Jeb izvēlēties visas sadaļas*/
     flex-wrap: wrap;
 }
 
@@ -138,13 +150,15 @@ h1, h2, h3{margin: 0;}
 #header-right {
     flex: 1;
 }
+
 #header-img{
     width: 455px;
 }
 
 #header-left p {
-    line-height: 200%;
+    line-height: 1.8;
 }
+
 #header-menu-box {
     display: flex;
     background-color: #fcbc34;
@@ -165,6 +179,7 @@ h1, h2, h3{margin: 0;}
     margin-top: 5px;
     margin-right: 30px;
 }
+
 #header-menu-price i{
     position: absolute;
     font-size: 62px;
@@ -173,7 +188,103 @@ h1, h2, h3{margin: 0;}
     border-radius: 100%;
 }
 
-h1{
-    font-size: 90px;
+/********GENERAL INFO*********/
+
+h2{
+    font-size: 56px;
+    letter-spacing: -4px;
+    font-weight: 900;
 }
 
+.stylized-txt {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    color: #ea272f;
+}
+
+#general-info {
+    display: flex;
+    margin-left: 63px; /*Varētu atsevišķu container, lai visām sadaļām šis ir*/
+    margin-right: 70px;
+    padding-top: 75px;
+    height: 90vh;
+    max-height: 550px; /*Varētu atsevišķu container ar max-height katrai sadaļai BET ir sadaļas, kurām !=, tpc vrbt ne...*/
+    column-gap: 250px;
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+#general-info p:not(:first-of-type){
+     line-height: 1.8;
+     color: gray;
+     padding-bottom: 10px;
+}
+
+#general-info-right, #general-info-left{
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+
+#general-info-right{
+    text-align: right;
+}
+
+#general-info-img {
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+.general-info-btn {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    padding: 22px 45px;
+    border-radius: 45px;
+    color: white;
+    background-color: #ea272f;
+}
+
+.general-info-btn i{
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.general-info-btn:hover{
+    background-color:#fcbc34;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+/*BEST SELLERS*/
+
+#best-sellers{
+    display: flex;
+    flex-direction: column;
+}
+
+#best-sellers-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.best-sellers-card {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.best-sellers-card img{
+    width: 100px;
+}
