@@ -4,6 +4,7 @@ body {
     margin: 0;
     margin-left: auto;
     margin-right: auto;
+    overflow-x: hidden;
 }
 
 h1, h2, h3{margin: 0;}
@@ -34,6 +35,11 @@ h1, h2, h3{margin: 0;}
     justify-content: space-between;
     color: #fff;
     font-size: 16px;
+    /*position: fixed;*/
+    height: 100px;
+    width: 100vw;
+    max-width: 1300px;
+    z-index: 1;
 }
 
 #navbar a{
@@ -134,7 +140,9 @@ h1 {
     margin: 0;
     height: 90vh;
     max-height: 500px; /*Media query (?), lai height būtu lielāks, kad ekrāns mazāks, citādi img ieiet nākamajā sadaļā*/
+    /*padding-top: 175px;*/
     padding-top: 100px;
+    padding-bottom: 10px;
     column-gap: 30px;
     margin-left: 63px; /*Varētu atsevišķu container, lai visām sadaļām šis ir*/
     margin-right: 70px; /*Jeb izvēlēties visas sadaļas*/
@@ -173,14 +181,14 @@ h1 {
     font-size: 24px;
 }
 
-#header-menu-price {
+#header-menu-box .price{
     text-decoration: none;
     font-size: 52px;
     margin-top: 5px;
     margin-right: 30px;
 }
 
-#header-menu-price i{
+#header-menu-box i{
     position: absolute;
     font-size: 62px;
     margin-left: 10px;
@@ -208,7 +216,7 @@ h2{
     display: flex;
     margin-left: 63px; /*Varētu atsevišķu container, lai visām sadaļām šis ir*/
     margin-right: 70px;
-    padding-top: 75px;
+    padding-top: 50px;
     height: 90vh;
     max-height: 550px; /*Varētu atsevišķu container ar max-height katrai sadaļai BET ir sadaļas, kurām !=, tpc vrbt ne...*/
     column-gap: 250px;
@@ -242,24 +250,25 @@ h2{
     transform: translateX(-50%);
 }
 
-.general-info-btn {
+#general-info button {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
     border: none;
+    margin-top: 15px;
     padding: 22px 45px;
     border-radius: 45px;
     color: white;
     background-color: #ea272f;
 }
 
-.general-info-btn i{
+#general-info button i{
     padding-right: 10px;
     font-size: 18px;
 }
 
-.general-info-btn:hover{
+#general-info button:hover{
     background-color:#fcbc34;
     transition: all 0.25s;
     cursor: pointer;
@@ -267,24 +276,90 @@ h2{
 
 /*BEST SELLERS*/
 
-#best-sellers{
+#best-sellers {
     display: flex;
     flex-direction: column;
+    margin-left: 63px; /*Varētu atsevišķu container, lai visām sadaļām šis ir*/
+    margin-right: 70px;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    text-align: center;
+}
+
+#best-sellers .stylized-txt{
+    font-size: 200%;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 
 #best-sellers-menu {
     display: flex;
+    flex: 1;
+    column-gap: 30px;
     flex-direction: row;
+    margin-top: 75px;
 }
 
 .best-sellers-card {
-    width: 200px;
-    margin: 10px;
-    padding: 10px;
+    padding: 40px 30px 20px 30px;
     border: 1px solid lightgray;
     border-radius: 10px;
+    align-content: center;
 }
 
 .best-sellers-card img{
-    width: 100px;
+    width: 175px;
 }
+
+.best-sellers-card h3{
+    font-size: 24px;
+}
+
+.best-sellers-card p:first-of-type{
+    color: gray;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.best-sellers-card .price{
+    font-size: 24px;
+    color: #ea272f;
+    font-weight: bold;
+}
+
+.best-sellers-card button{
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 0.5px solid lightgray;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding: 15px 45px;
+    box-shadow: lightgray 0 10px 25px 2px;
+    border-radius: 45px;
+    color: #ea272f;
+    background-color: #ffff;
+}
+
+@media (hover: hover) {
+    .best-sellers-card:hover {
+        background-color: #ea272f;
+        border-color: #ea272f;
+        cursor: pointer;
+    }
+
+        .best-sellers-card:hover p,
+        .best-sellers-card:hover h3 {
+            color: white;
+        }
+
+        .best-sellers-card:hover button {
+            border-color: #fcbc34;
+            background-color: #fcbc34;
+            color: black;
+            box-shadow: none;
+            cursor: pointer;
+        }
+}
+
