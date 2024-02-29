@@ -9,9 +9,21 @@ body {
 
 h1, h2, h3{margin: 0;}
 
-#logo{
-    width: 60px;
-    height: 60px;
+h2 {
+    font-size: 56px;
+    letter-spacing: -4px;
+    font-weight: 900;
+}
+
+.stylized-txt {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 26px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    color: #ea272f;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 
 .color-container:nth-of-type(1), .color-container:nth-of-type(2) {
@@ -28,6 +40,13 @@ h1, h2, h3{margin: 0;}
     margin-left: auto;
     margin-right: auto;
     max-width: 1300px;
+}
+
+/****NAVBAR****/
+
+#logo {
+    width: 60px;
+    height: 60px;
 }
 
 #navbar {
@@ -198,20 +217,6 @@ h1 {
 
 /********GENERAL INFO*********/
 
-h2{
-    font-size: 56px;
-    letter-spacing: -4px;
-    font-weight: 900;
-}
-
-.stylized-txt {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 22px;
-    letter-spacing: 3px;
-    font-weight: bolder;
-    color: #ea272f;
-}
-
 #general-info {
     display: flex;
     margin-left: 63px; /*Varētu atsevišķu container, lai visām sadaļām šis ir*/
@@ -264,7 +269,7 @@ h2{
 }
 
 #general-info button i{
-    padding-right: 10px;
+    margin-right: 10px;
     font-size: 18px;
 }
 
@@ -286,15 +291,9 @@ h2{
     text-align: center;
 }
 
-#best-sellers .stylized-txt{
-    font-size: 200%;
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-
 #best-sellers-menu {
     display: flex;
-    flex: 1;
+    flex: 1; /*?*/
     column-gap: 30px;
     flex-direction: row;
     margin-top: 75px;
@@ -348,18 +347,81 @@ h2{
         border-color: #ea272f;
         cursor: pointer;
     }
-
-        .best-sellers-card:hover p,
-        .best-sellers-card:hover h3 {
-            color: white;
-        }
-
-        .best-sellers-card:hover button {
-            border-color: #fcbc34;
-            background-color: #fcbc34;
-            color: black;
-            box-shadow: none;
-            cursor: pointer;
-        }
+    .best-sellers-card:hover p,
+    .best-sellers-card:hover h3 {
+        color: white;
+    }
+    .best-sellers-card:hover button {
+        border-color: #fcbc34;
+        background-color: #fcbc34;
+        color: black;
+        box-shadow: none;
+        cursor: pointer;
+     }
 }
 
+/****DEALS****/
+#deals {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+    margin-left: 63px;
+    text-align: center;
+    padding-bottom: 125px;
+}
+
+#deals-menu {
+    display: flex;
+    flex: 1;
+    column-gap: 30px;
+    flex-direction: row;
+    margin-top: 75px;
+}
+
+.deals-card {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: aqua;
+    justify-content: space-between;
+    padding: 50px 25px 45px 35px;
+    text-align: left;
+    border: none;
+    border-radius: 10px;
+}
+
+.deals-card:nth-of-type(1){background-color: #ea272f;}
+.deals-card:nth-of-type(2){background-color: #282424;}
+.deals-card:nth-of-type(3){background-color: #fe7a15;}
+
+.deals-card-right img{width: 130px;}
+
+.deals-card p{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top:0;
+    margin-bottom: 40px;
+}
+
+.deals-card .stylized-txt,
+.deals-card p,
+.deals-card a{
+    color: white;
+}
+
+.deals-card .stylized-txt{
+    margin-bottom: 15px;
+}
+
+.deals-card a{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.deals-card i {
+    margin-left: 10px;
+}
+
+.deals-card:hover{
+    cursor: pointer;
+}
