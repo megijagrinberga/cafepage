@@ -35,6 +35,9 @@ h2 {
 .color-container:nth-of-type(4), .content-container:nth-of-type(5) {
     background-color: #ffff;
 }
+.color-container:nth-of-type(6) {
+    background-color: #fff4e2;
+}
 
 .content-container {
     margin-left: auto;
@@ -250,7 +253,7 @@ h1 {
     width: 600px;
     position: absolute;
     left: 50%;
-    bottom: 50px;
+    bottom: 70px;
     right: 50%;
     transform: translateX(-50%);
 }
@@ -304,10 +307,12 @@ h1 {
     border: 1px solid lightgray;
     border-radius: 10px;
     align-content: center;
+    transition: all 0.25s;
 }
 
 .best-sellers-card img{
     width: 175px;
+    transition: transform 0.25s;
 }
 
 .best-sellers-card h3{
@@ -334,11 +339,15 @@ h1 {
     border: 0.5px solid lightgray;
     margin-top: 5px;
     margin-bottom: 30px;
-    padding: 15px 45px;
+    padding: 15px 30px;
     box-shadow: lightgray 0 10px 25px 2px;
     border-radius: 45px;
     color: #ea272f;
     background-color: #ffff;
+}
+
+.best-sellers-card i{
+    margin-right: 10px;
 }
 
 @media (hover: hover) {
@@ -346,6 +355,8 @@ h1 {
         background-color: #ea272f;
         border-color: #ea272f;
         cursor: pointer;
+        transform: translateY(-30px);
+        transition: all 0.25s;
     }
     .best-sellers-card:hover p,
     .best-sellers-card:hover h3 {
@@ -358,6 +369,11 @@ h1 {
         box-shadow: none;
         cursor: pointer;
      }
+
+    .best-sellers-card:hover img{
+        transform: scale(1.2,1.2) translateY(30px);
+        transition: transform 0.25s;
+    }
 }
 
 /****DEALS****/
@@ -425,3 +441,46 @@ h1 {
 .deals-card:hover{
     cursor: pointer;
 }
+
+/****SELLING POINT****/
+#selling-point {
+    margin-right: 70px;
+    margin-left: 63px;
+    position: relative;
+    padding-bottom: 100px;
+    z-index: 50;
+    height: 750px;
+}
+
+#selling-point-background {
+    display: flex;
+    background-color: #ea272f;
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    position: absolute;
+    left: 70%;
+    top: 50px;
+    right: 30%;
+    transform: translate(-70%);
+    z-index: 0;
+}
+
+#selling-point-list {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    z-index: 1;
+    left: 30%;
+    top: 30vh;
+    right: 70%;
+    transform: translate(-30%);
+}
+
+#selling-point-right, #selling-point-left {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+#selling-point-list img{width: 400px;}
