@@ -88,7 +88,7 @@ h2 {
     background-color: white;
 }
 
-#navbar-right > a:hover, #more-dropdown:hover .dropbtn {
+#navbar-right > a:hover, #more-dropdown:hover .dropbtn, #more-dropdown-content > a:hover {
     color: #fcbc34;
     transition: all 0.25s;
 }
@@ -301,6 +301,20 @@ h1 {
     flex-direction: row;
     margin-top: 75px;
 }
+
+#best-sellers-menu .slider {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.slider i{
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.slider i:hover{color: #fcbc34;}
 
 .best-sellers-card {
     padding: 40px 30px 20px 30px;

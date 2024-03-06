@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
     <title>MyFoodCafe</title>
+    <script src="scripts.js"></script>
 </head>
 <body>
     <div class="color-container">
@@ -77,34 +78,64 @@
                     <h2>Our Best Sellers</h2>
                 </div>
                 <div id="best-sellers-menu">
+                    <div class="slider prev" onclick="go"><i class="fa-solid fa-caret-left"></i></div>
                     <div class="best-sellers-card">
                         <h3>Thai Combo</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
                         <p class="price">12€</p>
-                        <button>ORDER NOW</button>
+                        <button><i class="fa-solid fa-cart-shopping"></i>ORDER NOW</button>
                         <img src="images/sushi-plate.png" alt="Picture of sushi" />
                     </div>
                     <div class="best-sellers-card">
                         <h3>Salmon Roll</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
                         <p class="price">13€</p>
-                        <button>ORDER NOW</button>
+                        <button><i class="fa-solid fa-cart-shopping"></i>ORDER NOW</button>
                         <img src="images/sushi-plate.png" alt="Picture of sushi" />
                     </div>
                     <div class="best-sellers-card">
                         <h3>Spicy Set</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
                         <p class="price">15€</p>
-                        <button>ORDER NOW</button>
+                        <button><i class="fa-solid fa-cart-shopping"></i>ORDER NOW</button>
                         <img src="images/sushi-plate.png" alt="Picture of sushi" />
                     </div>
                     <div class="best-sellers-card">
                         <h3>Fish Sushi</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
                         <p class="price">11€</p>
-                        <button>ORDER NOW</button>
+                        <button><i class="fa-solid fa-cart-shopping"></i>ORDER NOW</button>
                         <img src="images/sushi-plate.png" alt="Picture of sushi" />
                     </div>
+                    <div class="best-sellers-card">
+                        <h3>Thai Combo</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                        <p class="price">12€</p>
+                        <button><i class="fa-solid fa-cart-shopping"></i>ORDER NOW</button>
+                        <img src="images/sushi-plate.png" alt="Picture of sushi" />
+                    </div>
+                    <div class="best-sellers-card">
+                        <h3>Salmon Roll</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                        <p class="price">13€</p>
+                        <button><i class="fa-solid fa-cart-shopping"></i>ORDER NOW</button>
+                        <img src="images/sushi-plate.png" alt="Picture of sushi" />
+                    </div>
+                    <div class="best-sellers-card">
+                        <h3>Spicy Set</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                        <p class="price">15€</p>
+                        <button><i class="fa-solid fa-cart-shopping"></i>ORDER NOW</button>
+                        <img src="images/sushi-plate.png" alt="Picture of sushi" />
+                    </div>
+                    <div class="best-sellers-card">
+                        <h3>Fish Sushi</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                        <p class="price">11€</p>
+                        <button><i class="fa-solid fa-cart-shopping"></i>ORDER NOW</button>
+                        <img src="images/sushi-plate.png" alt="Picture of sushi" />
+                    </div>
+                    <div class="slider next"><i class="fa-solid fa-caret-right"></i></div>
                 </div>
             </div>
         </div>
@@ -151,10 +182,33 @@
             </div>
         </div>
     </div>
-    <div id="color-container">
-        <div id="content-container">
+    <div class="color-container">
+        <div class="content-container">
             <div id="selling-point">
-
+                <div id="selling-point-background"></div>
+                <div id="selling-point-list">
+                    <div id="selling-point-list-left">
+                        <img src="images/sushi-plate.png"/>
+                        <div class="selling-point-box">
+                            <span class="selling-point-icon"><i class="fa-solid fa-truck"></i></span>
+                            <p>Fastest delivery on your door step</p>
+                        </div>
+                    </div>
+                    <div id="selling-point-list-right">
+                        <div class="selling-point-box">
+                            <span class="selling-point-icon"><i class="fa-brands fa-apple"></i></span>
+                            <p>A new look on the right food!</p>
+                        </div>
+                        <div class="selling-point-box">
+                            <span class="selling-point-icon"><i class="fa-solid fa-globe"></i></span>
+                            <p>The use of natural best quality products</p>
+                        </div>
+                        <div class="selling-point-box">
+                            <span class="selling-point-icon"><i class="fa-solid fa-users"></i></span>
+                            <p>World’s best Chef and Nutritionist!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
